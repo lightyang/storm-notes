@@ -4,7 +4,7 @@ Root path is /storm.
 
 Storm/Topology - /storms/{storm-id}
 --
-Each znode stores information about a topology and corresponds to StormBase record type.
+This corresponds to StormBase record.
 + storm-name
 + launch-time-secs
 + num-workers
@@ -15,7 +15,7 @@ Each znode stores information about a topology and corresponds to StormBase reco
   * fields for killed: kill-time-secs
   * fields for rebalancing: delay-secs, old-status, num-workers, executor-overrides
 
-/assignments/{storm-id}
+Assignment - /assignments/{storm-id}
 --
 + master-code-dir: the directory containing code (jars, etc.) for this topo on the
                    master (nimbus) machine
@@ -25,9 +25,9 @@ Each znode stores information about a topology and corresponds to StormBase reco
 
 executor-id is [start-task-id end-task-id]. See Task Allocation (TODO).
 
-/supervisors/{supervisor-id}
+Supervisor heartbeat - /supervisors/{supervisor-id}
 --
-Supervisor heartbeat information. This corresponds to SupervisorInfo record type.
+This corresponds to SupervisorInfo record.
 + time-secs
 + hostname
 + assignment-id
@@ -36,9 +36,8 @@ Supervisor heartbeat information. This corresponds to SupervisorInfo record type
 + scheduler-meta: supervisor.scheduler.meta from storm config
 + uptime-secs
 
-/workerbeats/{storm-id}/{node-id}-{port}
+Worker heartbeat - /workerbeats/{storm-id}/{node-id}-{port}
 --
-Worker heartbeat information.
 + storm-id
 + executor-stats: a map from executor-id to stats. See stats.clj.
 + uptime (in secs)
