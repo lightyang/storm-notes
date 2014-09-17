@@ -1,2 +1,2 @@
-storm-notes
+Apache Storm learning notes
 ===========
