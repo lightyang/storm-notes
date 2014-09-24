@@ -39,7 +39,8 @@ This corresponds to SupervisorInfo record.
 Worker heartbeat - /workerbeats/{storm-id}/{node-id}-{port}
 --
 + storm-id
-+ executor-stats: a map from executor-id to stats. See stats.clj.
++ executor-stats: a map from executor-id to stats. This is also used to determine what executors
+  are on this worker. See stats.clj.
 + uptime (in secs)
 + time-secs
 
