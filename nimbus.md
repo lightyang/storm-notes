@@ -1,6 +1,6 @@
 Nimbus
 ==
-Worker slots means workers.
+Worker slots: workers.
 
 Task Allocation/Assignments
 --
