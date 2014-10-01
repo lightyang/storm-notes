@@ -2,6 +2,7 @@ Zookeeper
 ==
 Root path is /storm.
 
+<a name="storm"></a>
 Storm/Topology - /storms/{storm-id}
 --
 This corresponds to StormBase record.
@@ -15,6 +16,7 @@ This corresponds to StormBase record.
   * fields for killed: kill-time-secs
   * fields for rebalancing: delay-secs, old-status, num-workers, executor-overrides
 
+<a name="assignment"></a>
 Assignment - /assignments/{storm-id}
 --
 + master-code-dir: the directory containing code (jars, etc.) for this topo on the
@@ -25,6 +27,7 @@ Assignment - /assignments/{storm-id}
 
 executor-id is [start-task-id end-task-id]. See Task Allocation (TODO).
 
+<a name="supervisor"></a>
 Supervisor heartbeat - /supervisors/{supervisor-id}
 --
 This corresponds to SupervisorInfo record.
@@ -36,6 +39,7 @@ This corresponds to SupervisorInfo record.
 + scheduler-meta: supervisor.scheduler.meta from storm config
 + uptime-secs
 
+<a name="worker"></a>
 Worker heartbeat - /workerbeats/{storm-id}/{node-id}-{port}
 --
 + storm-id

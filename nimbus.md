@@ -15,7 +15,7 @@ Task Allocation/Assignments
   2. Update executor heartbeats.
   3. Compute alive executors using heartbeat info. Executors currently assigned to the rebalancing
      storm are considered alive automatically.
-  4. Compute dead ports from dead executors.They cannot be used in this round of assignment.
+  4. Compute dead ports from dead executors. They cannot be used in this round of assignment.
   5. Construct SchedulerAssignment objects from existing assignments info with only alive executors
      included. These objects are to be used by the scheduler API.
   6. Construct SupervisorDetails to be used by the scheduler API - basically what ports are
@@ -27,12 +27,6 @@ Task Allocation/Assignments
   2. Add start-time to reassigned executors.
 5. Update zookeeper, only for assignments that have changed.
 6. Notify INimbus about assigned slot changes.
-
-Topology submission
---
-
-Rebalancing
---
 
 Topology State Transition
 --
